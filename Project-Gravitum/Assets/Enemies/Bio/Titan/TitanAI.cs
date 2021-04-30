@@ -21,6 +21,7 @@ public class TitanAI : MonoBehaviour
         animate = this.GetComponent<Animator>();
         mtransform = this.GetComponent<Transform>();
         body = this.GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     // Start is called before the first frame update
     void Start()

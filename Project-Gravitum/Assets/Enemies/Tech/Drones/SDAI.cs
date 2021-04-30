@@ -25,6 +25,7 @@ public class SDAI : MonoBehaviour
         animate = this.GetComponent<Animator>();
         mtransform = this.GetComponent<Transform>();
         body = this.GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     // Start is called before the first frame update
     void Start()
@@ -67,7 +68,7 @@ public class SDAI : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && !isAttacking)
+        if (other.tag == "Player" && !isAttacking && alive)
         {
             //Debug.Log(other.name);
            // isAttacking = true;
