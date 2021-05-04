@@ -2803,9 +2803,11 @@ GameObject:
   - component: {fileID: 8997427790127265691}
   - component: {fileID: 8997427790127265689}
   - component: {fileID: 8997427790127265686}
+  - component: {fileID: 7235482719170771839}
+  - component: {fileID: 7376572294424317715}
   m_Layer: 0
   m_Name: thc6
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2903,6 +2905,34 @@ MonoBehaviour:
   attack: {fileID: 8997427790518037339}
   attackrange: 0.62
   player: {fileID: 0}
+  health: {fileID: 0}
+--- !u!114 &7235482719170771839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997427790207759700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  dead: 0
+--- !u!114 &7376572294424317715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997427790207759700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38167e847a5fdf247ab6cf5f0e388734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
 --- !u!1 &8997427790207759702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,7 +3124,7 @@ GameObject:
   - component: {fileID: 8997427791011586819}
   m_Layer: 0
   m_Name: Hopper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

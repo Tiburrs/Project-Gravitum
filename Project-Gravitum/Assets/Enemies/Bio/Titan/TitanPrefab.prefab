@@ -760,9 +760,11 @@ GameObject:
   - component: {fileID: 4859012925749495375}
   - component: {fileID: 4859012925749495373}
   - component: {fileID: 4859012925749495361}
+  - component: {fileID: 1253615315110991898}
+  - component: {fileID: 3670988037649435170}
   m_Layer: 0
   m_Name: Titan
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -861,6 +863,36 @@ MonoBehaviour:
   attack: {fileID: 4859012926527566540}
   attackrange: 1.18
   player: {fileID: 0}
+  health: {fileID: 0}
+--- !u!114 &1253615315110991898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859012925749495370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  dead: 0
+--- !u!114 &3670988037649435170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859012925749495370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38167e847a5fdf247ab6cf5f0e388734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs:
+  - {fileID: 1000011841440206, guid: 0ed203d298c050b49bfabe788790e1c2, type: 3}
+  - {fileID: 1000010880751780, guid: c3c0707254334a64ca8198f7486e977d, type: 3}
 --- !u!1 &4859012925749495372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,7 +1705,7 @@ GameObject:
   - component: {fileID: 4859012925759908113}
   m_Layer: 0
   m_Name: TitanPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
