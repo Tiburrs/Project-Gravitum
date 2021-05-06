@@ -60,9 +60,12 @@ public class SDAI : MonoBehaviour
             if (Physics.Raycast(mtransform.position + new Vector3(0f, .353f, 0f) + mtransform.forward * .4f, mtransform.forward, out hit, 9) && jump <= 0)
             {
                 // Debug.Log(hit.transform.name);
-               
-                body.AddForce((mtransform.forward + mtransform.up).normalized * 6, ForceMode.Impulse);
-                jump = cooldown;
+                if (hit.transform.tag == "Player")
+                {
+
+                    body.AddForce((mtransform.forward + mtransform.up).normalized * 6, ForceMode.Impulse);
+                    jump = cooldown;
+                }
             }
             jump -= Time.deltaTime;
         }

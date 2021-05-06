@@ -67,9 +67,12 @@ public class GDAI : MonoBehaviour
 
             if (Physics.Raycast(mtransform.position + new Vector3(0f, .353f, 0f) + mtransform.forward * .4f, mtransform.forward, out hit) && atkspeed <= 0 && delay <= 0 && !isAttacking)
             {
-                isAttacking = true;
-                animate.SetInteger("State", 0);
-                Debug.Log("Cast");
+                if (hit.transform.tag == "Player")
+                {
+                    isAttacking = true;
+                    animate.SetInteger("State", 0);
+                    Debug.Log("Cast");
+                }
             }
             delay -= Time.deltaTime;
             atkspeed -= Time.deltaTime;
