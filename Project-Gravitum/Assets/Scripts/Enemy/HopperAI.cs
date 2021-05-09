@@ -85,7 +85,7 @@ public class HopperAI : MonoBehaviour
         Collider[] hit = Physics.OverlapSphere(attack.position, attackrange);
         foreach(Collider obj in hit)
         {   if(obj.tag=="Player")
-            Debug.Log(obj.name);
+                obj.GetComponent<playerScript>().takeDamage(3000);
         }
        
         

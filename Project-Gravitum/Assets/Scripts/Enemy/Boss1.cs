@@ -12,9 +12,12 @@ public class Boss1 : MonoBehaviour
     bool attacking = false; 
     Vector3 range;
     public float rotate = .2f;
-    // Start is called before the first frame update
-    void Start()
+    public EnemyHealth health;
+
+
+    private void Start()
     {
+        health = this.GetComponent<EnemyHealth>();
         laser.gameObject.SetActive(true);
         cooldown = 3;
         atkspeed = cooldown;
@@ -25,7 +28,7 @@ public class Boss1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!attacking)
+        if (!health.dead)
         {
 
             Vector3 look = player.transform.position - barrel.position;
@@ -46,10 +49,10 @@ public class Boss1 : MonoBehaviour
                 laser.SetPosition(1, range);
                 if (hit.transform.tag == "Player")
                 {
-                    
-                   // Debug.Log(hit.point);
 
-                    
+                    hit.transform.GetComponent<playerScript>().takeDamage(10);
+
+
 
                 }
             }

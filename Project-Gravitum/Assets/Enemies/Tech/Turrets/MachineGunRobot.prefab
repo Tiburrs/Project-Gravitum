@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1452739511716890554}
   - component: {fileID: 1452739511716890555}
   - component: {fileID: 1452739511716890502}
+  - component: {fileID: 1659621458545748794}
   m_Layer: 0
   m_Name: PivotMachine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,8 +102,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.8547754, y: 1.3946829, z: 2.511712}
+  m_Center: {x: -0.108483076, y: -0.19734144, z: 0.75585604}
 --- !u!114 &1452739511716890555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,22 @@ MonoBehaviour:
   flare: {fileID: 2795981295455457576}
   rotate: 1
   delay: 0.2
+  health: {fileID: 0}
+--- !u!114 &1659621458545748794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452739511716890552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 300
+  dead: 0
+  spawnable: 0
 --- !u!1 &1452739512343948783
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +343,6 @@ GameObject:
   - component: {fileID: 2621906735392542390}
   - component: {fileID: 2595542591455648458}
   - component: {fileID: 2603935475560721794}
-  - component: {fileID: 4876185873495309575}
   m_Layer: 0
   m_Name: Robot_Eye
   m_TagString: Untagged
@@ -397,19 +413,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4876185873495309575
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2626817740621721940}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2733289, y: 1.1838268, z: 1.1147356}
-  m_Center: {x: -0.006748675, y: -0.1598427, z: 0.13643682}
 --- !u!1 &2626988750266544176
 GameObject:
   m_ObjectHideFlags: 0

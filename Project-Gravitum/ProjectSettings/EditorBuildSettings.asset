@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Monsters.unity
     guid: 29ec4826bdf207a49a01541a0c9aa61a
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
+    guid: 9a707a0760822dc438e6c397979aa6c1
   m_configObjects: {}

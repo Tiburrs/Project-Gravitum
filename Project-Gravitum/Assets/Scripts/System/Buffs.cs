@@ -21,14 +21,16 @@ public class Buffs : MonoBehaviour
         switch (bufftype)
         {
             case 0:
-                player.GetComponent<PlayerControl>().buffMS();
+                player.GetComponent<playerScript>().buffMS();
                 Destroy(this.gameObject);
                 break;
             case 1:
+                player.GetComponent<playerScript>().buffJ();
+                Destroy(this.gameObject);
                 break;
             case 2:
-                break;
-            case 3:
+                player.GetComponent<playerScript>().buffDR();
+                Destroy(this.gameObject);
                 break;
         }
     }

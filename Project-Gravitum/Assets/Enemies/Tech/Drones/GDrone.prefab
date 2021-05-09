@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7077571434928442476}
   - component: {fileID: 7077571434153217936}
   - component: {fileID: 5217273956469664797}
+  - component: {fileID: 3811146974028625189}
   m_Layer: 0
   m_Name: PA_Drone
   m_TagString: Enemy
@@ -153,7 +154,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &7077571434928442476
 BoxCollider:
@@ -183,6 +184,7 @@ MonoBehaviour:
   attack: {fileID: 7077571434170295730}
   attackrange: 1
   player: {fileID: 0}
+  health: {fileID: 0}
   vf:
   - {fileID: 4000309049794314223, guid: d98d7240639332d4d91bca658578e8b0, type: 3}
 --- !u!114 &5217273956469664797
@@ -197,7 +199,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 30
+  dead: 0
+  spawnable: 1
+--- !u!114 &3811146974028625189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077571434153217939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38167e847a5fdf247ab6cf5f0e388734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs:
+  - {fileID: 1000011841440206, guid: 0ed203d298c050b49bfabe788790e1c2, type: 3}
+  - {fileID: 1000012510692222, guid: f5c872ee906a85b46aa65e0ab683ed9f, type: 3}
+  - {fileID: 1000010646675420, guid: 1a73058088a4b204bb3a13aff5c48489, type: 3}
 --- !u!1 &7077571434153217941
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +599,7 @@ Transform:
   m_GameObject: {fileID: 7077571434497844408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7077571434152727475}
   m_Father: {fileID: 0}

@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 6315079159107372963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6315079159666549081}
   m_Father: {fileID: 0}
@@ -938,6 +938,7 @@ GameObject:
   - component: {fileID: 6315079159666326900}
   - component: {fileID: 6315079159666326902}
   - component: {fileID: 5291144216891164717}
+  - component: {fileID: 3202315722089640402}
   m_Layer: 0
   m_Name: PA_Warrior
   m_TagString: Enemy
@@ -995,7 +996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 6315079157745312349}
-  attackrange: 1
+  attackrange: 1.98
   player: {fileID: 0}
   explode: {fileID: 6315079159673863659}
   ms: 0
@@ -1054,8 +1055,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 20
   dead: 0
+  spawnable: 1
+--- !u!114 &3202315722089640402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6315079159666326905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38167e847a5fdf247ab6cf5f0e388734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs:
+  - {fileID: 1000011841440206, guid: 0ed203d298c050b49bfabe788790e1c2, type: 3}
+  - {fileID: 1000012510692222, guid: f5c872ee906a85b46aa65e0ab683ed9f, type: 3}
+  - {fileID: 1000010646675420, guid: 1a73058088a4b204bb3a13aff5c48489, type: 3}
 --- !u!1 &6315079159666326907
 GameObject:
   m_ObjectHideFlags: 0

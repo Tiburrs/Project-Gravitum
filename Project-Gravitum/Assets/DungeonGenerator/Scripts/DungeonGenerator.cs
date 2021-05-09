@@ -44,8 +44,9 @@ public class DungeonGenerator : MonoBehaviour {
         random.Init(seed);
 
         if (randomizeRoomSize) {
-            targetRooms = 15 + (int)(random.value() * 50f);
+            targetRooms = 30 + (int)(random.value() * 50f);
         }
+        Debug.Log(targetRooms);
 
         roomsCount = 0;
         globalVoxels = new Dictionary<Vector3, GameObject>();

@@ -15,9 +15,12 @@ public class Boss2 : MonoBehaviour
     float shoot;
     float atkspeed, cooldown;
     bool attacking;
-    // Start is called before the first frame update
-    void Start()
+    public EnemyHealth health;
+
+
+    private void Start()
     {
+        health = this.GetComponent<EnemyHealth>();
         attacking = true;
         shoot = delay;
         cooldown = 3;
@@ -29,35 +32,38 @@ public class Boss2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Vector3 look = player.transform.position - barrel.position;
-        Quaternion rot = Quaternion.LookRotation(look);
-
-        mtransform.rotation = Quaternion.Slerp(mtransform.rotation, rot, rotate * Time.deltaTime);//Debug.Log(mtransform.eulerAngles.x);
-        if (transform.eulerAngles.x < 330 && mtransform.eulerAngles.x > 280)
+        if (!health.dead)
         {
-            
-            mtransform.eulerAngles = new Vector3(325, mtransform.eulerAngles.y, mtransform.eulerAngles.z);
-        }
-        if (attacking&&shoot<0)
-        {
-            flare.Play();
-            Shoot();
-            shoot = delay;
-            
-        }
-        if (atkspeed < 0)
-        {
-            flare.Pause();
-            attacking = !attacking;
-          
-            atkspeed = cooldown;
-        }
-        atkspeed -= Time.deltaTime;
 
-        shoot -= Time.deltaTime;
-            
 
+            Vector3 look = player.transform.position - barrel.position;
+            Quaternion rot = Quaternion.LookRotation(look);
+
+            mtransform.rotation = Quaternion.Slerp(mtransform.rotation, rot, rotate * Time.deltaTime);//Debug.Log(mtransform.eulerAngles.x);
+            if (transform.eulerAngles.x < 330 && mtransform.eulerAngles.x > 280)
+            {
+
+                mtransform.eulerAngles = new Vector3(325, mtransform.eulerAngles.y, mtransform.eulerAngles.z);
+            }
+            if (attacking && shoot < 0)
+            {
+                flare.Play();
+                Shoot();
+                shoot = delay;
+
+            }
+            if (atkspeed < 0)
+            {
+                flare.Pause();
+                attacking = !attacking;
+
+                atkspeed = cooldown;
+            }
+            atkspeed -= Time.deltaTime;
+
+            shoot -= Time.deltaTime;
+
+        }
         
        
     }

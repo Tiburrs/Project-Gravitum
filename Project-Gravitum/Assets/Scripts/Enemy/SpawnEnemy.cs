@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject enemytype;
+    public int enemycount;
+    private void Awake()
     {
-        
+        GameState.enemygoal += enemycount;
+    }
+    public void Spawn()
+    {
+        Vector3 SpawnLoc = transform.position;
+        for(int i =0; i<enemycount; i++)
+        {
+            Instantiate(enemytype, SpawnLoc, Quaternion.identity);
+
+        }
+
+        Destroy(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

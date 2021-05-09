@@ -31,7 +31,12 @@ public class MoveProj : MonoBehaviour
     {
         if (!collision.collider.gameObject.name.Contains("Bullet"))
         {
-            Debug.Log(collision.collider.gameObject.name);
+            // Debug.Log(collision.collider.gameObject.name);
+            if (collision.collider.gameObject.tag == "Player")
+            {
+                collision.collider.gameObject.GetComponent<playerScript>().takeDamage(1000);
+
+            }
             speed = 0;
             Destroy(gameObject);
         }

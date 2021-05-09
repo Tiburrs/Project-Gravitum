@@ -19,7 +19,7 @@ public class RayCast : MonoBehaviour
         {
             if (hit.transform.tag == "Enemy")
             {
-                hit.transform.GetComponent<EnemyHealth>().takeDamage();
+                hit.transform.GetComponent<EnemyHealth>().takeDamage(100000);
             }
             Debug.DrawRay(transform.position, this.transform.forward*hit.distance, Color.green);
             Debug.DrawRay(hit.point, hit.normal, Color.yellow);

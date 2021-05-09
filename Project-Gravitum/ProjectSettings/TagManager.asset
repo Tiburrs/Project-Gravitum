@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - GameC
+  - UI
+  - SC
+  - board
+  - BGM
   layers:
   - Default
   - TransparentFX

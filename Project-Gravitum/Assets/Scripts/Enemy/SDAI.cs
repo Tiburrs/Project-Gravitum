@@ -69,11 +69,12 @@ public class SDAI : MonoBehaviour
             }
             jump -= Time.deltaTime;
         }
+       
       
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && !isAttacking && alive)
+        if (other.tag == "Player" && !isAttacking && !health.dead)
         {
             //Debug.Log(other.name);
            // isAttacking = true;
@@ -94,14 +95,13 @@ public class SDAI : MonoBehaviour
         foreach (Collider obj in hit)
         {
             if (obj.tag == "Player")
-                Debug.Log(obj.name);
+                obj.GetComponent<playerScript>().takeDamage(4000);
         }
 
 
 
 
-        health.hp = 0;
-        health.takeDamage();
+        health.dead = true;
         alive = false;
     }
     private void OnDrawGizmosSelected()

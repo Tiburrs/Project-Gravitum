@@ -23,6 +23,7 @@ public class TitanAI : MonoBehaviour
         mtransform = this.GetComponent<Transform>();
         body = this.GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        animate.SetInteger("State", 4);
     }
     // Start is called before the first frame update
     void Start()
@@ -71,6 +72,7 @@ public class TitanAI : MonoBehaviour
     void playMove()
     {
         move = true;
+    
     }
     void Attack()
     {
@@ -81,11 +83,11 @@ public class TitanAI : MonoBehaviour
         foreach (Collider obj in hit)
         {
             if (obj.tag == "Player")
-                Debug.Log(obj.name);
+                obj.GetComponent<playerScript>().takeDamage(5000);
         }
 
 
-
+        animate.SetInteger("State", 4);
         isAttacking = false;
     }
     private void OnDrawGizmosSelected()

@@ -2862,7 +2862,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &8997427790127265691
 BoxCollider:
@@ -2903,7 +2903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 8997427790518037339}
-  attackrange: 0.62
+  attackrange: 2.27
   player: {fileID: 0}
   health: {fileID: 0}
 --- !u!114 &7235482719170771839
@@ -2918,8 +2918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 70
   dead: 0
+  spawnable: 1
 --- !u!114 &7376572294424317715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,7 +2933,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38167e847a5fdf247ab6cf5f0e388734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buffs: []
+  buffs:
+  - {fileID: 1000011841440206, guid: 0ed203d298c050b49bfabe788790e1c2, type: 3}
+  - {fileID: 1000012510692222, guid: f5c872ee906a85b46aa65e0ab683ed9f, type: 3}
+  - {fileID: 1000010646675420, guid: 1a73058088a4b204bb3a13aff5c48489, type: 3}
 --- !u!1 &8997427790207759702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,7 +3142,7 @@ Transform:
   m_GameObject: {fileID: 8997427791011586818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.039, z: -3.545}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8997427790207265078}
   m_Father: {fileID: 0}

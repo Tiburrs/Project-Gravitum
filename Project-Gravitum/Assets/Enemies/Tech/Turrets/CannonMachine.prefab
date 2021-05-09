@@ -15372,9 +15372,10 @@ GameObject:
   - component: {fileID: 8479093988759562957}
   - component: {fileID: 8479093988759562954}
   - component: {fileID: 8479093988759562993}
+  - component: {fileID: 2224554276014600120}
   m_Layer: 0
   m_Name: PivotCannon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15455,8 +15456,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.1429307, y: 1.8543262, z: 2.2435412}
+  m_Center: {x: -0.018822433, y: 0.42716312, z: 0.6217836}
 --- !u!114 &8479093988759562954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15485,6 +15486,22 @@ MonoBehaviour:
   barrel: {fileID: 8479093989575509016}
   laser: {fileID: 6276460454066639955}
   rotate: 0.8
+  health: {fileID: 0}
+--- !u!114 &2224554276014600120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479093988759562955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ed8d15d92fb534f88df125746b23ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 300
+  dead: 0
+  spawnable: 0
 --- !u!1 &8479093989575509017
 GameObject:
   m_ObjectHideFlags: 0
