@@ -24,10 +24,10 @@ public class SceneController : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.buildIndex != build)
             build = currentScene.buildIndex;
-       /* if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             ChangeScene(2);
-        }*/
+        }
         switch (build)
         {
             case 0:

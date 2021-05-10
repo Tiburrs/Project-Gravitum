@@ -40,7 +40,7 @@ public class PlayerUI : MonoBehaviour
     }
 
 
-    private float timeRemaining = 300;
+    private float timeRemaining = 10;
     public bool timerIsRunning = false;
     int buildIndex;
     public GameObject pause;
